@@ -164,7 +164,7 @@ class ClaudeDriverPlugin:
             "--model", model,
             "--output-format", "stream-json",
             "--verbose",
-            "--dangerously-skip-permissions",
+            "--permission-mode", "acceptEdits",
         ]
         if session_id:
             command += ["--resume", session_id]
@@ -184,7 +184,7 @@ class ClaudeDriverPlugin:
             "--model", model,
             "--output-format", "stream-json",
             "--verbose",
-            "--dangerously-skip-permissions",
+            "--permission-mode", "acceptEdits",
             "--resume", session_id,
         ]
 
